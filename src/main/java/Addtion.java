@@ -2,7 +2,9 @@ public class Addtion {
 
     public int Add(String number) {
 
-        String[] strArry = number.split(",");
+        String clean = number.replaceAll("\n",",");
+        String[] strArry = clean.split(",");
+
         int[] intArry = new int[strArry.length];
         int count = 0;
         try {

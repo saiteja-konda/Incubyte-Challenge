@@ -15,6 +15,7 @@ public class AdditionTest {
     public void AdditionOfOneAndTwoIsThree(){
         Assert.assertEquals(3,addtion.Add("1,2"));
     }
+
 /* Task two */
 
     //Testcase 3 addtion of unknown numbers from the given string
@@ -23,4 +24,9 @@ public class AdditionTest {
         Assert.assertEquals(10,addtion.Add("1,2,3,4"));
     }
 
+    //Testcase 4 Support different delimiters
+    @Test
+    public void differentDelimiters(){
+        Assert.assertEquals(6,addtion.Add("1\n2,3"));
+    }
 }
