@@ -1,10 +1,19 @@
 public class Addtion {
 
-    public int Add(String number, String number2)  {
+    public int Add(String number) {
 
+        String[] strArry = number.split(",");
+        int[] intArry = new int[strArry.length];
+        int count = 0;
         try {
-            return Integer.parseInt(number) + Integer.parseInt(number2);
-        } catch (NumberFormatException e){
+            for (int i = 0; i < strArry.length; i++) {
+                intArry[i] = Integer.parseInt(strArry[i]);
+            }
+            for (int el : intArry) {
+                count = count + el;
+            }
+            return count;
+        } catch (NumberFormatException e) {
             return 0;
         }
     }
